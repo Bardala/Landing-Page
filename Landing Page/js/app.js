@@ -69,18 +69,6 @@ function createNavList() {
   list.innerHTML = htmlCode;
 }
 
-// Scroll to section on link click
-list.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  let target = evt.target;
-  if (target.className === "menu__link") {
-    targetSection = document.querySelector(
-      `#${sectionIdFromItemId(target.id)}`
-    );
-    targetSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
-
 // Add class 'active' to section when near top of viewport
 
 // Set sections as active
@@ -116,8 +104,6 @@ function updateSectionState() {
     else sectionDeactivation(sec);
   });
 }
-// Scroll to anchor ID using scrollTO event
-document.addEventListener("scroll", updateSectionState);
 
 /**
  * End Main Functions
@@ -125,33 +111,51 @@ document.addEventListener("scroll", updateSectionState);
  *
  */
 
-// Build menu
+// Scroll to section on link click
+list.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  let target = evt.target;
+  if (target.className === "menu__link") {
+    targetSection = document.querySelector(
+      `#${sectionIdFromItemId(target.id)}`
+    );
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }
+});
 
-// list.addEventListener(
-//   "mouseover",
-//   (evt) => {
-//     evt.preventDefault();
-//     let target = evt.target;
-//     if (target.className === "menu__link") {
-//       targetSection = document.querySelector(
-//         `#${sectionIdFromItemId(target.id)}`
-//       );
-//       target.style.background = "#333";
-//       setTimeout(() => {
-//         target.style.color = "";
-//       }, 500);
-//     }
-//   },
-//   false
-// );
+// Scroll to anchor ID using scrollTO event
+document.addEventListener("scroll", updateSectionState);
 
-// list.addEventListener("blur", (evt) => { // vs 'focus'
-//   evt.preventDefault();
-//   let target = evt.target;
-//   if (target.className === "menu__link") {
-//     targetSection = document.querySelector(
-//       `#${sectionIdFromItemId(target.id)}`
-//     );
-//     target.style.background = "";
-//   }
-// });
+
+//(draft)
+// some functions I have learned but I have no longer need it in my project 
+/*
+list.addEventListener(
+  "mouseover",
+  (evt) => {
+    evt.preventDefault();
+    let target = evt.target;
+    if (target.className === "menu__link") {
+      targetSection = document.querySelector(
+        `#${sectionIdFromItemId(target.id)}`
+      );
+      target.style.background = "#333";
+      setTimeout(() => {
+        target.style.color = "";
+      }, 500);
+    }
+  },
+  false
+);
+
+list.addEventListener("blur", (evt) => { // vs 'focus'
+  evt.preventDefault();
+  let target = evt.target;
+  if (target.className === "menu__link") {
+    targetSection = document.querySelector(
+      `#${sectionIdFromItemId(target.id)}`
+    );
+    target.style.background = "";
+  }
+});
+*/
