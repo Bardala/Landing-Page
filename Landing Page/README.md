@@ -8,7 +8,7 @@
 - use Dom and JavaScript to add and remove active class when scrolling through the sections
 
 
-## sources 
+## Sources 
 
 - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 - https://developer.mozilla.org/en*US/docs/Web/API/Element/getBoundingClientRect
