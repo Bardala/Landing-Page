@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- Html and css mostly from udacity's startup project but i did some changes
+- Html and css mostly from udacity's project but i did some changes
 - use Dom to generate a navbar
-- smooth scroll with js
-- add and remove active class when scrolling through the sections
-- editing some css and html
+- use Dom to generate smooth scroll
+- use Dom and JavaScript to add and remove active class when scrolling through the sections
+
 
 ## sources i used
 
