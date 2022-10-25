@@ -1,0 +1,83 @@
+/* Start Global Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: "work sans", sans-serif;
+}
+/* End Global Rules */
+
+
+.header{
+    background-color:  hsl(217, 39%, 88%);
+    
+}
+.container{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+/*small screen*/
+@media screen and (max-width: 767px){
+    .container{
+        width: 100%;
+    }
+}
+/*medium screen*/
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .container{
+        width: 100%;
+    }
+}
+/*large screen*/
+@media screen and (min-width: 992px){
+    .container{
+        width: 600px;
+    }
+}
+
+/* start header */
+.header{
+    padding :20px;
+    }
+.header .container{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.header .logo{
+    width: 60px;
+}
+.header .links{
+    position: relative;
+}
+.header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color: rgb(1, 0, 0);
+    margin-bottom: 5px;
+    height: 3px;
+
+}
+.header .links .icon .span:first-child{
+    width: 100%;
+}
+.header .links .icon .span:nth-child(2){
+    width: 60%;
+} 
+.header .links .icon .span:last-child{
+    width: 100%;
+}
+.header .links:hover .icon .span:nth-child(2){
+    width: 100%;
+}
+
