@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- Html and css mostly from udacity's project but i did some changes
+- Html and CSS mostly from udacity project but I did some changes and added CSS files to normalize the page
 - use Dom to generate a navbar
 - use Dom to generate smooth scroll
 - use Dom and JavaScript to add and remove active class when scrolling through the sections
